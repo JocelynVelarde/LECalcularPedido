@@ -5,6 +5,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class Method extends JFrame {
 
@@ -75,12 +76,16 @@ public class Method extends JFrame {
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
              // Add background image
-    ImageIcon backgroundImage = new ImageIcon("LECalcularPedido/LECalcularPedido/CalcularPedido/src/assets");
+             ImageIcon backgroundImage = new ImageIcon("C:"+File.separator+"Users"+File.separator+"jvela"+File.separator+"Downloads"+File.separator+"star.jpg");
+
     JLabel background = new JLabel(backgroundImage);
     background.setSize(new Dimension(600, 400));
     background.setLayout(new BorderLayout());
-    background.add(mainPanel, BorderLayout.CENTER);
+    background.setLayout(null);
+
+
     mainPanel.setLayout(null);
+    background.setBounds(0, 0, 600, 400);
 
     // Add the panel to the frame
     add(background);
